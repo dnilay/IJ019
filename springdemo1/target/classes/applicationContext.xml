@@ -5,8 +5,22 @@
 
 <bean name="theCoach" class="org.example.demo.model.BaseBallCoach"></bean>
 <bean name="person" class="org.example.demo.model.Person" scope="prototype">
-<constructor-arg name="id" value="100"/>
+<!-- <constructor-arg name="id" value="100"/>
 <constructor-arg name="name" value="John Doe"/>
 <constructor-arg name="age" value="21"/>
+<constructor-arg name="address" ref="address"/> -->
+<property name="id" value="100"/>
+<property name="name" value="John Doe"/>
+<property name="age" value="23"/>
+<property name="address" ref="address"></property>
 </bean>
+<bean name="address" class="org.example.demo.model.Address">
+<!-- <constructor-arg name="addressLine1" value="India"/>
+<constructor-arg name="addressLine2" value="karnataka"/>
+<constructor-arg name="city" value="Banglore"/>
+ -->
+ <property name="addressLine1" value="India"/>
+ <property name="addressLine2" value="Karnataka"/>
+ <property name="city" value="Banglore"/>
+ </bean>
 </beans>
